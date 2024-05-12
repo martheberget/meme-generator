@@ -1,0 +1,86 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 28px 36px 0 36px;
+}
+
+.form__container {
+  display: flex;
+  width: 100%;
+}
+
+.form__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form__content input {
+  border-style: solid;
+  border-color: #d1d5db;
+  border-radius: 5px;
+  border-width: 1px;
+  outline: none;
+  height: 34px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #6b7280;
+  text-indent: 8px;
+}
+
+.form__content label {
+  margin-bottom: 3px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #374151;
+}
+
+.form__content--bottom {
+  margin-left: 33px;
+}
+
+.form__button {
+  width: 100%;
+  height: 50px;
+  margin-top: 15px;
+  border: none;
+  background: red;
+  outline: none;
+  color: #ffffff;
+  background-image: linear-gradient(to right, rgb(103, 34, 128, 100%), rgb(166, 38, 211, 100%));
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.meme__container {
+  display: flex;
+  justify-content: center;
+  margin: 28px 36px 0 36px;
+}
+
+.meme__container img {
+  width: 100%;
+  height: auto;
+}
+
+/* MOBILE */
+@media (max-width: 460px) {
+  .form__content label {
+    font-size: 0.7rem;
+  }
+
+  .form__content input {
+    font-size: 0.8rem;
+  }
+
+  .form__content--bottom {
+    margin-left: 10px;
+  }
+
+  .form__button {
+    font-size: 0.8rem;
+  }
+}
