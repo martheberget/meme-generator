@@ -22,17 +22,27 @@ export function Meme() {
     });
   }
 
+  console.log(meme);
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setMeme((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  }
+
   return (
     <>
       <div className="form" action="">
         <div className="form__container">
           <div className="form__content form__content--top">
-            <label htmlFor="text-top">{meme.topText}</label>
-            <input type="text" name="text-top" id="text-top" placeholder="Shut up" />
+            <label htmlFor="text-top"></label>
+            <input type="text" name="topText" id="text-top" placeholder="Shut up" value={meme.topText} onChange={handleChange} />
           </div>
           <div className="form__content form__content--bottom">
-            <label htmlFor="text-bottom">{meme.bottomText}</label>
-            <input type="text" name="text-bottom" id="text-bottom" placeholder="And take my money" />
+            <label htmlFor="text-bottom"></label>
+            <input type="text" name="bottomText" id="text-bottom" placeholder="And take my money" value={meme.bottomText} onChange={handleChange} />
           </div>
         </div>
 
@@ -41,7 +51,9 @@ export function Meme() {
         </button>
       </div>
       <div className="meme__container">
-        <img src={meme.memeImg} alt="" />
+        <img src={meme.memeImg} className="meme--image" />
+        <h2 className="meme--text top">{meme.topText}</h2>
+        <h2 className="meme--text bottom">{meme.bottomText}</h2>
       </div>
     </>
   );
